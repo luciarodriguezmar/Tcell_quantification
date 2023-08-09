@@ -18,13 +18,12 @@ class Cells:
         self.imageshape = None
         # self.image = None
         self.file = r'\*_export_s{}_*'.format(str(sl_num).zfill(3))
-    
     def get_imageshape(self, folder):
         '''
         params
         '''
         imgfile_list = []
-        patchsize = (8192,8192)
+        patchsize = (9360,8792)
         
         R = 0
         C = 0
@@ -40,7 +39,7 @@ class Cells:
             if c > C:
                 C = c
         
-        self.imageshape = (R, C, *patchsize)
+        self.imageshape = (4, 4, *patchsize)
         return self.imageshape
 
     def img_from_tiles(self, folder):
@@ -57,12 +56,13 @@ class Cells:
             ind = re.findall('\d+', imgfile[-15:])
             r, c = int(ind[1]), int(ind[2])
 
-            imagepatches[r - 1, c - 1, :, :] = io.imread(imgfile).astype(np.uint8)
+            imagepatches[r-1, c-1, :, :] = io.imread(imgfile).astype(np.uint8)
 
         image = unpatchify(imagepatches, (self.imageshape[0] * self.imageshape[2], self.imageshape[1] * self.imageshape[3]))
         image = image.astype(np.uint8)
-
+        
         return image
+
 
     def label_cells(self, image):
         '''
@@ -112,3 +112,5 @@ if __name__ == "__main__":
 
     # print(cell5_bboxes[0][25])
     # print(cell5_bboxes[1][25])
+
+
