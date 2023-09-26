@@ -1,4 +1,4 @@
-USE OF THE ANALYSIS
+#USE OF THE ANALYSIS
 The code allows the analysis of volume SEM datasets segmented with VAST Lite in order to extract morphological features in 2D and 3D of cells. These features include the area of different organelles and the shape, in terms of roundness in 2D or sphericity in 3D.
 HOW TO USE
 1.	ENVIRONMENT 
