@@ -22,5 +22,6 @@ If running the code on a different dataset, check the specifications of tile siz
  
 #### 3.2.	ANALYSIS IN 3D
 After 3.1., run the ‘3D_tcell_analysis.ipynb’ using the excel file generated with the 2D features. 
+After obtaining the features in 3D, this code also allows running PCA analysis and kmeans clustering, as well as statistical analysis and visualization of the data in napari.
 ### 4. OLD FILES
 In case of wanting to re-run old files for the analysis of FoxP3+ cells, the excel files needed for this analysis are in the folder excel_files_final.
