@@ -15,6 +15,7 @@ Once completed, to export the segmentation for the analysis, in Vast: File > Exp
 *  Export currently selected label (and select each segment layer for each organelle manually).
 Export each segment layer individually one by one and store each in a different folder. The name of the individual files must contain the expression ".vsseg_export_s".
 ### 3.	ANALYSIS
+For the analysis, you will require to have in the same directory as the jupyter notebooks, the files Cells.py and MGfeatures.py.
 #### 3.1.	ANALYSIS IN 2D
 After exporting the segmentation, we can either analyze the morphological properties of the cells in 2D or in 3D. In either case, the features have to extracted in 2D in the first place. Run the code ‘2D_tcell_analysis.ipynb’.
 If running the code on a different dataset, check the specifications of tile size on the ‘Cells.py’ file, as instructed in ‘2D_tcell_analysis.ipynb’.
