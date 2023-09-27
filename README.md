@@ -6,7 +6,7 @@ To set up the environment for running the code, create a new environment in anac
 In case this doesn't work, manually import all packages necessary for the code using conda install or pip install (packages under pip in the yml file will most likely require pip installing) using the same version as the one written in the yml file.
 ### 2.	SEGMENTATION AND EXPORT
 The cells of interest have to be segmented in Vast in a hierarchical way, so that the parent layer includes the whole cell surface. Each organelle category is segmented as a sublayer dependent from the parent ‘cell’. In the same way, the ‘heterochromatin’ layer is dependent from the ‘nucleus’ layer. In case of wanting to analyze the cells morphology in 3D, each cell has to be segmented in all sections. 
-!(https://github.com/luciarodriguezmar/Tcell_quantification/blob/main/example_segmentation.PNG)
+!(example_segmentation.PNG)
 Once completed, to export the segmentation for the analysis, in Vast: File > Export, and export the data using the following conditions:
 * Multi-tile stack
 * Mip level: 0
